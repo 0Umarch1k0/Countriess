@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+:root {
+    --alohida: rgb(136, 157, 162);
+    --asosiy: #2B3844;
+    --soya: #0000000E;
+    --oq: white;
+    --qora: black;
+    --main: #202C36;
+   
+}
+
+.dark {
+    --alohida: rgb(40, 61, 68);
+    --oq: black;
+    --qora: white;
+    --soya: gray;
+    --asosiy: white;
+    --main: rgb(155, 174, 186);
+}
+
+body {
+    background-color: var(--main);
+}
+
+a {
+    list-style: none;
+    text-decoration: none;
+}
+
+
+header {
+    padding: 24px 0;
+    background: var(--asosiy);
+    box-shadow: 0px 2px 4px 0px var(--soya);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--oq);
+    font-size: 30px;
+}
+
+.btn {
+    font-size: 22px;
+    background-color: var(--asosiy);
+    padding: 6px 12px;
+    border-radius: 10px;
+    color: var(--oq);
+}
+
+main {
+    background-color: var(--main);
+}
+
+.hero {
+    padding: 50px 0;
+}
+
+input {
+    padding: 18px 20px;
+    background-color: var(--asosiy);
+    width: 480px;
+    height: 56px;
+    color: var(--oq);
+    box-shadow: 0px 2px 9px 0px var(--soya);
+    border-radius: 14px;
+    outline: none;
+    border: none;
+}
+
+.country {
+    width: 264px;
+    background-color: var(--asosiy);
+    padding-bottom: 32px;
+    box-shadow: 0px 0px 7px 2px var(--soya);
+    border-radius: 16px;
+
+}
+
+.country img {
+    width: 100%;
+    height: 200px;
+}
+
+.country__name {
+    text-align: center;
+    color: var(--oq);
+    margin: 32px 0;
+}
+
+.countries__box {
+    display: flex;
+    margin-top: 50px;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.select-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+select {
+    width: 250px;
+    height: 50px;
+    background-color: var(--asosiy);
+    color: var(--oq);
+    font-size: 20px;
+    padding: 8px 10px;
+    border-radius: 14px;
+    border: none;
+}
+
+.infos-contry {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    color: var(--oq);
+
+}
+
+.info-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.millat {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+main {
+    padding: 30px 0;
+}
+
+.back {
+    padding: 12px 16px;
+    margin: 10px 40px;
+    list-style: none;
+    text-decoration: none;
+    color: var(--oq);
+    font-style: 24px;
+    border: 1px solid var(--oq);
+    border-radius: 5px;
+}
+
+.infos-img {
+    width:  500px;
+    max-height: 350px;
+    border-radius: 10px;
+    box-shadow: var(--oq) 0px 14px 28px, var(--oq) 0px 10px 10px;
+}
+
+span {
+    color: var(--alohida);
+}
+
+.card-flag {
+    width: 500px;
+    min-height: 540px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.card-flag .img-box .infos-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+
+}
+
+.card-flag::after {
+    content: "";
+    position: absolute;
+    inset: 1;
+    border: 2px solid var(--oq);
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+
+.card-flag:hover .infos-img {
+    filter:
+        grayscale(1) brightness(0.4);
+}
+
+.card-flag:hover::after {
+    opacity: 1;
+    inset: 5px;
+}
+
+.card-flag:hover .flags-info h1 {
+    scale: 1;
+    opacity: 1;
+    text-align: center;
+}
+
+.card-flag:hover .flags-info h3 {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+.flags-info {
+    display: none;
+}
+
+.card-flag:hover .flags-info {
+    display: block;
+    margin: 0 0 0 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:834px) {
+    .countries__box {
+        gap: 150px;
+    }
+
+    header {
+        padding: 24px 32px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .btn {
+        font-size: 18px;
+    }
+
+    input {
+        width: 90%;
+        display: block;
+        margin: 10px auto;
+    }
+}
